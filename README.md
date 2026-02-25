@@ -1,5 +1,4 @@
 # MEGA_COLLAGE_Analysis
-# MEGA_COLLEGE_ANALYSIS
 
 This project is an End-to-End Data Analysis project where I worked on cleaning, preparing, and analyzing a college dataset using Python, MySQL, and Power BI.
 
