@@ -130,3 +130,4 @@ df.to_sql("MEGA_COLLAGE_DATA",con=engine,if_exists='replace',index=False)
 # plt.ylabel("")  # remove y-label for cleaner chart
 # plt.show()
 
+
