@@ -52,12 +52,12 @@ SELECT college_name, Student_Strength FROM MEGA_COLLAGE_DATA
 #Rank colleges based on student strength.
 select city,college_name,student_strength,rank() over (partition by city order by student_strength desc) as RANKS from mega_collage_data ;
 #################################################################
-# RANK() → skips ranking numbers when duplicates exist.
-# DENSE_RANK() → does not skip ranking numbers.
+# RANK() = skips ranking numbers when duplicates exist.
+# DENSE_RANK() = does not skip ranking numbers.
 #where partion help it help us in where 
 #PARTITION BY means ranking separately inside each group.
-#Without partition → ranking on whole table
-#With partition → ranking group wise#
+#Without partition = ranking on whole table
+#With partition = ranking group wise#
 #########################################################
 
 
