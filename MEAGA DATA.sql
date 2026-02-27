@@ -50,11 +50,22 @@ SELECT college_name, Student_Strength FROM MEGA_COLLAGE_DATA
     FROM MEGA_COLLAGE_DATA
 );
 #Rank colleges based on student strength.
+select city,college_name,student_strength,rank() over (partition by city order by student_strength desc) as RANKS from mega_collage_data ;
+#################################################################
+# RANK() → skips ranking numbers when duplicates exist.
+# DENSE_RANK() → does not skip ranking numbers.
+#where partion help it help us in where 
+#PARTITION BY means ranking separately inside each group.
+#Without partition → ranking on whole table
+#With partition → ranking group wise#
+#########################################################
+
 
 #Find duplicate college names in the dataset.
+select count(*) as collage_count, College_Name from mega_collage_data group by  College_Name,landline_no,College_Principal_Contact_Number  having count(*)>1;
+
+
 #Find which region has the maximum MBA colleges.
-select COUNT(College_Type),Region_North_South_East_West_Central from mega_collage_data 
-where College_Type='MBA'  group by College_Type >(select max(Region_North_South_East_West_Central) from mega_collage_data);
 SELECT Region_North_South_East_West_Central, COUNT(*) AS mba_college_count
 FROM mega_collage_data
 WHERE College_Type = 'MBA'
