@@ -27,12 +27,7 @@ df.to_excel(r"C:\Users\ved.katoch.DESKTOP-82LU7M3\Downloads\Mega Dataset.xlsx",i
 # df.to_csv("clan data.csv",index=False)
 
 ###############################################################################
-# Base Exception
-# Deleting redundant columns 
-# Renamina the-columns. Droppina duplicates.
-# Cleanina individual columns. Remove the NaN values from the dataser
-# Check for some more Transformations
-############################################################################################################
+
 # df.to_csv("clan data.csv",index=False)
 print(df.rename(columns={"Unnamed_0":"S NO:"},inplace=True))
 
@@ -129,5 +124,6 @@ df.to_sql("MEGA_COLLAGE_DATA",con=engine,if_exists='replace',index=False)
 # plt.title("Total Student Strength by Region")   
 # plt.ylabel("")  # remove y-label for cleaner chart
 # plt.show()
+
 
 
