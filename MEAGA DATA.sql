@@ -44,6 +44,7 @@ select state ,sum(Student_Strength) as total from  MEGA_COLLAGE_DATA group by st
   
 #Find colleges whose student strength is above average.
 select avg(Student_Strength) as average_ans from mega_collage_data;
+##########################################################################
 SELECT college_name, Student_Strength FROM MEGA_COLLAGE_DATA
  WHERE Student_Strength > (
     SELECT AVG(Student_Strength) 
