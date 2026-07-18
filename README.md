@@ -1,29 +1,43 @@
-# MEGA_COLLAGE_Analysis
+# 🎓 Student Strength Prediction System
 
-This project is an End-to-End Data Analysis project where I worked on cleaning, preparing, and analyzing a college dataset using Python, MySQL, and Power BI.
+This project is an **End-to-End Machine Learning project** where I worked on cleaning, preprocessing, and analyzing a college dataset to predict the approximate student strength of colleges using **Python, MySQL, Scikit-learn, and Streamlit**.
 
 ## 📌 Data Source
-The dataset used in this project was collected during my Data Analytics Internship.  
-The raw data was gathered from different educational platforms such as Shiksha, official college websites, and other public education sources.
 
-After collecting the raw data, I prepared the dataset by performing:
-- Data cleaning
-- Handling missing values
-- Data transformation
-- Standardizing column names
-- Database integration
-
-The cleaned dataset was later used for SQL analysis and Power BI dashboard creation.
+The dataset used in this project contains information about colleges across different states of India. It includes details such as **State, City, College Type, College Management, Region,Total Number of Courses, and Student Strength**. Before model development, the dataset was thoroughly cleaned and prepared to ensure high-quality and reliable data for prediction.
 
 ## ⚙️ Work Done in This Project
-- Data cleaning using Python (Pandas)
-- Handling missing and duplicate records
-- Data storage in MySQL database
-- Writing SQL queries for analysis
-- Creating Power BI dashboard for visualization
 
-## 🛠️ Tools Used
-Python, Pandas, MySQL, SQLAlchemy, Power BI
+* Cleaned and preprocessed raw college data using **Pandas**
+* Handled missing values, duplicate records, and inconsistent data
+* Standardized region names and column names
+* Converted data types and cleaned invalid entries
+* Stored the cleaned dataset in a **MySQL** database using **SQLAlchemy**
+* Trained a **Random Forest Regressor** to predict student strength
+* Evaluated model performance using the **R² Score**
+* Saved the trained model using **Joblib**
+* Developed an interactive **Streamlit** web application for real-time predictions
+
+## 🛠️ Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* MySQL
+* SQLAlchemy
+* Scikit-learn
+* Random Forest Regressor
+* Joblib
+* Streamlit
+* Matplotlib
+* Seaborn
+
+## 🚀 Future Improvements
+
+* Perform more advanced **data cleaning and preprocessing** to improve data quality and prediction accuracy.
+* Expand the dataset by including more colleges and additional features such as NAAC grade, placement statistics, and infrastructure details.
+* Deploy the Streamlit application on a cloud platform for public access.
 
 ## 🎯 About Me
-I am interested in becoming a **Data Scientist**, and currently I am learning and building projects in Data Analytics to strengthen my fundamentals in data cleaning, databases, and visualization. This project is part of my learning journey where I am exploring real-world data and improving my skills step by step.
+
+I am a **BCA Graduate** with a strong interest in **Data Science, Machine Learning, and Data Analytics**. I enjoy working on real-world datasets and building end-to-end projects that involve data cleaning, database management, machine learning, and web application development. This project reflects my practical learning journey and has helped me strengthen my skills in **Python, SQL, Pandas, Scikit-learn, MySQL, and Streamlit** while gaining hands-on experience in solving real-world data problems.
