@@ -144,13 +144,10 @@ df["State"] = df["State"].replace({
     "NCT Of Delhi": "Delhi",
     "Nct Of Delhi": "Delhi",
 })
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> 70ea1c3 (Updated data cleaning pipeline and retrained ML model)
 ###################################################################################
 
 
