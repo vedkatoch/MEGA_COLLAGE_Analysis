@@ -111,27 +111,33 @@ df.columns = (
     .str.replace(",", "", regex=False)
     .str.replace(":", "", regex=False)
 )
+
 #############################################################################################################
 df["State"] = df["State"].astype(str).str.strip()
-df["State"] = df["State"].replace({
-    "Jammu & Kashmir": "Jammu and Kashmir",
-    "Jammu And Kashmir": "Jammu and Kashmir",
-    "Jammu Kashmir": "Jammu and Kashmir",
-    "Jammu And Kashmire": "Jammu and Kashmir",
 
+# Replace invalid values
+df["State"] = df["State"].replace({
+    # Jammu & Kashmir
+    "Jammu kashmir": "Jammu and Kashmir",
+    "Jammu Kashmir": "Jammu and Kashmir",
+    "JAMMU AND KASHMIR": "Jammu and Kashmir",
+    "jammu and kashmir": "Jammu and Kashmir",
+    "Jammu & Kashmir": "Jammu and Kashmir",
+    "Jammu": "Jammu and Kashmir",
+
+    # Uttar Pradesh
+    "UP": "Uttar Pradesh",
     "Up": "Uttar Pradesh",
     "U.P": "Uttar Pradesh",
     "U.P.": "Uttar Pradesh",
+    "UTTAR PRADESH": "Uttar Pradesh",
+    "Uttar pradesh": "Uttar Pradesh",
 
+    # Delhi
+    "New Delhi": "Delhi",
+    "NCT Of Delhi": "Delhi",
     "Nct Of Delhi": "Delhi",
-    "New Delhi": "Delhi"
 })
-
-# Remove duplicate state names
-df["State"] = df["State"].drop_duplicates()
-
-print(sorted(df["State"].dropna().unique()))
-
 ###################################################################################
 
 
@@ -140,7 +146,7 @@ print(df.columns)
 
 df.to_csv("clean data.csv",index=False) 
 
-df.to_sql("MEGA_COLLAGE_DATA",con=engine,if_exists='replace',index=False)
+# df.to_sql("MEGA_COLLAGE_DATA",con=engine,if_exists='replace',index=False)
 # Sum all student strengths per region
 # region_sum = df.groupby("Region_North_South_East_West_Central")["Student_Strength"].sum()
 # region_sum.plot(kind="pie", autopct='%1.1f%%', figsize=(6,6))
