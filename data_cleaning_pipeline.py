@@ -112,6 +112,35 @@ df.columns = (
     .str.replace(":", "", regex=False)
 )
 
+# Remove extra spaces
+df["State"] = df["State"].astype(str).str.strip()
+
+# Convert to Title Case
+df["State"] = df["State"].str.title()
+
+# Replace different names with one standard name
+df["State"] = df["State"].replace({
+    "Jammu & Kashmir": "Jammu and Kashmir",
+    "Jammu And Kashmir": "Jammu and Kashmir",
+    "Jammu Kashmir": "Jammu and Kashmir",
+    "Jammu And Kashmire": "Jammu and Kashmir",
+
+    "Up": "Uttar Pradesh",
+    "U.P": "Uttar Pradesh",
+    "U.P.": "Uttar Pradesh",
+
+    "Nct Of Delhi": "Delhi",
+    "New Delhi": "Delhi"
+})
+
+# Remove duplicate state names
+df["State"] = df["State"].drop_duplicates()
+
+print(sorted(df["State"].dropna().unique()))
+
+
+
+
 print("Cleaned columns:")
 print(df.columns)
 
