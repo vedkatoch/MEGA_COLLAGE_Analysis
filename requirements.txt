@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 pandas
 numpy
 matplotlib
@@ -7,4 +8,15 @@ streamlit
 joblib
 sqlalchemy
 pymysql
+=======
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+streamlit
+joblib
+sqlalchemy
+pymysql
+>>>>>>> 70ea1c3 (Updated data cleaning pipeline and retrained ML model)
 openpyxl

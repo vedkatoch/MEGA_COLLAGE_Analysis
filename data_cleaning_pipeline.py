@@ -66,11 +66,17 @@ print(df["Student_Strength"])
 ########################################################################################
 df['Student_Strength']=pd.to_numeric(df["Student_Strength"],errors="coerce").fillna(0).astype(int)
 print(df["Student_Strength"])
-df["Student_Strength"] = df["Student_Strength"].astype(str)
+###########################################################
+df = df[df["Student_Strength"] > 0]
+df = df[df["Student_Strength"] <= 10000]
+print(df["Student_Strength"].describe())
+###########################################################
 
-df["Student_Strength"] = df["Student_Strength"].apply(
-    lambda x: "2" if len(x) == 11 else x
-)
+# df["Student_Strength"] = df["Student_Strength"].astype(str)
+
+# df["Student_Strength"] = df["Student_Strength"].apply(
+#     lambda x: "2" if len(x) == 11 else x
+# )
 df['Total_no._of_Courses']=pd.to_numeric(df["Total_no._of_Courses"],errors="coerce").fillna(0).astype(int)
 print(df["Total_no._of_Courses"])
 
@@ -138,6 +144,13 @@ df["State"] = df["State"].replace({
     "NCT Of Delhi": "Delhi",
     "Nct Of Delhi": "Delhi",
 })
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 70ea1c3 (Updated data cleaning pipeline and retrained ML model)
 ###################################################################################
 
 

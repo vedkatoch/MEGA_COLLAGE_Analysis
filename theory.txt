@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Handling
  Strings
  st.write() parses Markdown (e.g., passing "**bold**" will make the text bold).
@@ -9,4 +10,17 @@ st.text() only accepts string-like inputs
 
 Arguments:
 st.write() allows you to pass multiple arguments at once (e.g., st.write("Hello", 5, my_dataframe)).
+=======
+Handling
+ Strings
+ st.write() parses Markdown (e.g., passing "**bold**" will make the text bold).
+ st.text() displays strings exactly as they are (e.g., "**bold**" will be shown as literal asterisks).
+
+Data Types:
+st.write() acts as a "Swiss Army knife" that works with DataFrames, JSON, exceptions, and Matplotlib/Plotly figures.
+st.text() only accepts string-like inputs
+
+Arguments:
+st.write() allows you to pass multiple arguments at once (e.g., st.write("Hello", 5, my_dataframe)).
+>>>>>>> 70ea1c3 (Updated data cleaning pipeline and retrained ML model)
 st.text() only takes one string argument
