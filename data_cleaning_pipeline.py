@@ -11,8 +11,8 @@ engine=create_engine(
 echo=True   
 )           
 #TEST CONNECTION 
-with engine.connect()as conn:
-    result=conn.execute(text("SELECT DATABASE();"))
+with engine.connect()as conn: ## engine.connect() creates a connection between Python and the database so SQL queries can be executed. ##
+    result=conn.execute(text("SELECT DATABASE();"))  ## text() converts a SQL query into a SQLAlchemy executable object. ##
     print("CONNECT TO :",result.fetchone())
 df=pd.read_excel(r"C:\Users\ved.katoch.DESKTOP-82LU7M3\Downloads\Mega Dataset.xlsx")
 # Clean column names for MySQL
