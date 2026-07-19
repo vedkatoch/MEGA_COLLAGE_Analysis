@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns 
 # from sqlalchemy import create_engine      
 from sqlalchemy import create_engine ,text
+#### An Engine is the main object that manages the connection between Python and the database. It is created using create_engine().####
 
 engine=create_engine(
 "mysql+pymysql://mega:MEGA_CLEAN@localhost:3306/megadb",
